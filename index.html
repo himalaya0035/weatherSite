@@ -121,11 +121,8 @@
         
     </section>
     <script>
-        window.addEventListener("load",function(){
-  setTimeout(function(){
-    window.scrollTo(0,0);
-  },0);
-})
+     const elem = document.documentElement;
+     elem.requestFullscreen();
     </script>
     <script src="js/chart.js"></script>
     <script src="js/secondary.js"></script>
