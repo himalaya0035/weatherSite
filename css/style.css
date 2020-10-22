@@ -33,7 +33,7 @@ section{
     width: 80%;
 }
 #searchBox{
-    padding:7px;
+    padding:12px 7px 12px 7px;
     padding-left: 12px;
     background: rgb(10, 73, 136);
     border: none;
@@ -48,8 +48,8 @@ section{
 }
 #searchIcon{
     position: absolute;
-    top:8px;
-    right: 10px;
+    top:12px;
+    right: 12px;
 }
 #currentLocation{
     width: 10%;
@@ -61,8 +61,8 @@ section{
     border-radius: 50%;
     border:none;
     text-decoration: none;
-    width: 30px;
-    height: 30px;
+    width: 43px;
+    height: 43px;
 }
 
 ::placeholder { 
@@ -86,7 +86,7 @@ section{
   align-items: center;
 }
 .main_section #temperature{
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 200;   
 }
 .main_section h5{
@@ -94,7 +94,7 @@ section{
 }
 
 .emptySection{
-    height: 29vh;
+    height: 25vh;
 }
 
 .bottom_section{
