@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'Montserrat';
+    color:white;
+}
+html{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+section{
+    scroll-snap-align: start;
+    background: url('../images/night_back1.png');
+    background-size: cover;
+    height: 100vh;
+    padding: 10px;
+}
+.top_bar{
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.searchBar{
+    display: flex;
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 80%;
+}
+#searchBox{
+    padding:7px;
+    padding-left: 12px;
+    background: rgb(10, 73, 136);
+    border: none;
+    border-radius:20px;
+    color:white;
+    font-size: 14px;
+    max-width: 420px;
+    width: 100%;
+}
+#searchBox:focus{
+    outline: none;
+}
+#searchIcon{
+    position: absolute;
+    top:8px;
+    right: 10px;
+}
+#currentLocation{
+    width: 10%;
+    background: rgb(10, 73, 136);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border:none;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+}
+
+::placeholder { 
+    color: white;
+    opacity: 1; 
+  }
+/* top section ends here */
+.lastUpdated{
+    display: flex;
+    padding-left: 20px;
+    margin-top: 20px;   
+}
+
+/* main section starts here */
+.main_section{
+  margin-top: 15px;
+  height: 25vh;  
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_section #temperature{
+    font-size: 4rem;
+    font-weight: 200;   
+}
+.main_section h5{
+    font-weight: 100;
+}
+
+.emptySection{
+    height: 29vh;
+}
+
+.bottom_section{
+    height: 36vh;
+    max-width: 420px;
+    width: 100%;
+    overflow-x: auto;
+}
+.chartContainer{
+    width: 1200px;
+    height: 36vh;
+}
+
+
+.details{
+    background-color:rgba(203, 205, 206, 0.15) ;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.contentRow {
+    display: flex;
+    justify-content: center;
+}
+.rowContent{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-top:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+.rowContent h5{
+    font-weight: 100;
+}
+.rowContent h6{
+    font-weight: 300;
+    color: rgba(233, 231, 231, 0.6);
+}
+

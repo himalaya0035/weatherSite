@@ -1,0 +1,13 @@
+things to extract
+1- Min, max temperature .
+2- weatherText .
+3- weatherIcon .
+4- feel like (real feel) .
+5- wind speed and directio  .
+6- humidity  .
+7- visibility  .
+8- air quality  
+9- 5-9 days forecast
+10-Pressure
+11- hourly forecast
+12 - Uv
