@@ -35,7 +35,7 @@
                 <h5>Feels Like 29&deg;</h5>
             </div>
             <div class="weatherIcon">
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="95">
+                <img src="http://openweathermap.org/img/wn/10n@2x.png" alt="" width="95">
                 <h5 style="text-align: center;">Clear</h5>
             </div>
         </div>
@@ -48,7 +48,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="secondSection">
         <div class="details">
             <div class="TableHeading" style="border-bottom:1px solid white; padding-bottom:5px;">
                 Details
@@ -56,7 +56,7 @@
             <div class="contentRow">
                 <div class="rowContent" style="border-right: 1px solid white; border-bottom: 1px solid white;">
                     <div>
-                        <h6>NW</h6>
+                        <h6>Wind Speed</h6>
                         <h5>5.34 Km/h</h5>
                     </div>
                     <img src="images/wind.svg" alt="" width="20">
@@ -72,7 +72,7 @@
             <div class="contentRow">
                 <div class="rowContent" style="border-right: 1px solid white; border-bottom:1px solid white;">
                     <div>
-                        <h6>UV</h6>
+                        <h6>UV Index</h6>
                         <h5>1</h5>
                     </div>
                     <img src="images/uv-index.svg" alt="" width="20">
@@ -118,12 +118,104 @@
                 </div>
             </div>
         </div>
-        
+        <div class="dailyForecast" style="margin-top:10px;">
+            <div class="TableHeading" style="border-bottom:1px solid white; padding-bottom:5px;">
+              7-day Forecast
+            </div>
+            <div class="rowContent2">
+                <div class="dayAndMonth">
+                    <h5>Sat, 24 Oct</h5>
+                    <h6>Clear Sky</h6>
+                </div>
+                <div class="weatherAndTemp" style="display: flex; align-items: center;">
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" width="50">
+                    <div class="minMax">
+                        <h6>32&deg;</h6>
+                        <h6>17&deg;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="rowContent2">
+                <div class="dayAndMonth">
+                    <h5>Sun, 25 Oct</h5>
+                    <h6>Rain</h6>
+                </div>
+                <div class="weatherAndTemp" style="display: flex; align-items: center;">
+                    <img src="http://openweathermap.org/img/wn/10n@2x.png" alt="" width="50">
+                    <div class="minMax">
+                        <h6>29&deg;</h6>
+                        <h6>17&deg;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="rowContent2">
+                <div class="dayAndMonth">
+                    <h5>Mon, 26 Oct</h5>
+                    <h6>Thunderstorm</h6>
+                </div>
+                <div class="weatherAndTemp" style="display: flex; align-items: center;">
+                    <img src="http://openweathermap.org/img/wn/11n@2x.png" alt="" width="50">
+                    <div class="minMax">
+                        <h6>25&deg;</h6>
+                        <h6>13&deg;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="rowContent2">
+                <div class="dayAndMonth">
+                    <h5>Tue, 27 Oct</h5>
+                    <h6>Mist</h6>
+                </div>
+                <div class="weatherAndTemp" style="display: flex; align-items: center;">
+                    <img src="http://openweathermap.org/img/wn/50n@2x.png" alt="" width="50">
+                    <div class="minMax">
+                        <h6>25&deg;</h6>
+                        <h6>13&deg;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="rowContent2">
+                <div class="dayAndMonth">
+                    <h5>Wed, 28 Oct</h5>
+                    <h6>Clear Sky</h6>
+                </div>
+                <div class="weatherAndTemp" style="display: flex; align-items: center;">
+                    <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" width="50">
+                    <div class="minMax">
+                        <h6>25&deg;</h6>
+                        <h6>13&deg;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="rowContent2">
+                <div class="dayAndMonth">
+                    <h5>Thu, 29 Oct</h5>
+                    <h6>Clouds</h6>
+                </div>
+                <div class="weatherAndTemp" style="display: flex; align-items: center;">
+                    <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="" width="50">
+                    <div class="minMax">
+                        <h6>25&deg;</h6>
+                        <h6>13&deg;</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="rowContent2">
+                <div class="dayAndMonth">
+                    <h5>Fri, 30 Oct</h5>
+                    <h6>Clouds</h6>
+                </div>
+                <div class="weatherAndTemp" style="display: flex; align-items: center;">
+                    <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="" width="50">
+                    <div class="minMax">
+                        <h6>21&deg;</h6>
+                        <h6>13&deg;</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <script>
-     const elem = document.documentElement;
-     elem.requestFullscreen();
-    </script>
+
     <script src="js/chart.js"></script>
     <script src="js/secondary.js"></script>
     <script src="js/main.js"></script>
