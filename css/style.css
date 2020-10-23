@@ -20,6 +20,7 @@ section{
     height: 100vh;
     padding: 10px;
 }
+
 .top_bar{
     height: auto;
     display: flex;
@@ -99,7 +100,7 @@ section{
 
 .bottom_section{
     height: 36vh;
-    max-width: 420px;
+    max-width: 620px;
     width: 100%;
     overflow-x: auto;
 }
@@ -109,19 +110,19 @@ section{
 }
 
 
-.details{
-    background-color:rgba(203, 205, 206, 0.15) ;
+.details,.dailyForecast{
+    background-color:rgba(88, 163, 201, 0.15) ;
     border-radius: 10px;
     border: none;
     padding: 10px;
     padding-bottom: 0px;
+    height: auto;
 }
-
 .contentRow {
     display: flex;
     justify-content: center;
 }
-.rowContent{
+.rowContent,.rowContent2{
     width: 200px;
     height: 50px;
     display: flex;
@@ -132,11 +133,26 @@ section{
     padding-right: 10px;
     padding-bottom: 5px;
 }
-.rowContent h5{
+.rowContent2{
+    width: 100%;
+    border-bottom: 1px solid whitesmoke;
+}
+.rowContent2:last-of-type{
+    border: none;
+}
+.rowContent h5,.rowContent2 h5{
     font-weight: 100;
 }
-.rowContent h6{
+.rowContent2 h5{
+    color: rgba(233, 231, 231, 0.6) ;
+
+}
+.rowContent h6,.rowContent2 h6{
     font-weight: 300;
     color: rgba(233, 231, 231, 0.6);
+}
+.rowContent2 h6{
+    color: white;
+    font-size: 12px;
 }
 
