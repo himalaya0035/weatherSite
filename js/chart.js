@@ -33,21 +33,21 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["a","b","c","d","e","f","g","h","i","j","k","l","l","m","n","o","p","q","r","s","t","u"],
+    labels: ["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM","2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM", "10:00 PM", "11:00 PM", "12:00 AM", "1:00 AM", "2:00 AM", "3:00 AM", "4:00 AM", "5:00 AM"],
     datasets: [{
-      label: "Earnings",
+      label: "Temperature",
       lineTension: 0.3,
       backgroundColor: "rgba(123, 15, 155, 0.2)",
       borderColor: "rgba(255, 255, 255, 1)",
       pointRadius: 3,
-      pointBackgroundColor: "rgba(0, 0, 0, 1)",
-      pointBorderColor: "rgba(0, 0, 0, 1)",
+      pointBackgroundColor: "rgba(56, 54, 40,1)",
+      pointBorderColor: "rgba(56, 54, 40,1)",
       pointHoverRadius: 3,
       pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000, 30000,10000,1000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: [32,29,28,27,26,25,24,23,25,22,22,22,26,23,25,28,30,32,33,33,33,31,30],
     }],
   },
   options: {
@@ -79,7 +79,7 @@ var myLineChart = new Chart(ctx, {
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return   number_format(value);
           }
         },
         gridLines: {
@@ -111,7 +111,7 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + '\xB0' + 'C';
         }
       }
     }
