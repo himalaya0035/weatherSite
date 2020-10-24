@@ -22,7 +22,10 @@ section {
     height: 100vh;
     padding: 10px;
 }
-
+.secondSection{
+    height: auto;
+    padding-bottom: 40px;
+}
 .top_bar {
     height: auto;
     display: flex;
@@ -132,8 +135,8 @@ section {
 }
 
 .dailyForecast .rowContainer {
-    height: 320px;
-    overflow-y: auto;
+    /* height: 325px;
+    overflow-y: auto; */
 }
 
 .contentRow {
