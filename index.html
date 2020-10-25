@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    
     <div class="contentWrapper">
     <section class="content">
         <div class="top_bar">
@@ -123,11 +123,11 @@
             </div>
         </div>
         <div class="dailyForecast" style="margin-top:10px;">
-            <div class="TableHeading" style=" padding-bottom:5px;">
+            <div class="TableHeading" style=" padding-bottom:10px;">
                 7-day Forecast
             </div>
             <div class="rowContainer">
-                <div class="rowContent2">
+                <div class="rowContent2" id="myBtn">
                     <div class="dayAndMonth">
                         <h5>Sat, 24 Oct</h5>
                         <h6>Clear Sky</h6>
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2">
+                <div class="rowContent2 myBtn">
                     <div class="dayAndMonth">
                         <h5>Sun, 25 Oct</h5>
                         <h6>Rain</h6>
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2">
+                <div class="rowContent2 myBtn">
                     <div class="dayAndMonth">
                         <h5>Mon, 26 Oct</h5>
                         <h6>Thunderstorm</h6>
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2">
+                <div class="rowContent2 myBtn">
                     <div class="dayAndMonth">
                         <h5>Tue, 27 Oct</h5>
                         <h6>Mist</h6>
@@ -179,7 +179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2">
+                <div class="rowContent2 myBtn">
                     <div class="dayAndMonth">
                         <h5>Wed, 28 Oct</h5>
                         <h6>Clear Sky</h6>
@@ -192,7 +192,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2">
+                <div class="rowContent2 myBtn">
                     <div class="dayAndMonth">
                         <h5>Thu, 29 Oct</h5>
                         <h6>Clouds</h6>
@@ -205,7 +205,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2">
+                <div class="rowContent2 myBtn">
                     <div class="dayAndMonth">
                         <h5>Fri, 30 Oct</h5>
                         <h6>Clouds</h6>
@@ -223,9 +223,29 @@
         <div class="siteFooter">
             <h5>Site Created By : <a href="#">Himalaya Gupta</a> </h5>
         </div>
+              <!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Details</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+ 
+  </div>
+
+</div>
     </section>
     </div>
-
+  
 
     <div id="showBigScreen">
         <h2 class="text-align:center">This site is available only for mobile user. We sincerely apologize for the inconveniance caused.</h2>
