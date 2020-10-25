@@ -133,7 +133,9 @@ section {
     padding-bottom: 0px;
     height: auto;
 }
-
+.dailyForecast{
+    padding-bottom: 10px;
+}
 .dailyForecast .rowContainer {
     /* height: 325px;
     overflow-y: auto; */
@@ -151,15 +153,16 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
+    padding: 5px 10px 5px 10px;
 }
 
 .rowContent2 {
     width: 100%;
-    border-bottom: 1px solid whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background:linear-gradient(rgba(95, 94, 94, 0.5),rgba(110, 110, 110, 0.5));
+    margin-bottom:3px;
+    /* border-bottom: 1px solid whitesmoke; */
 }
 
 .rowContent2:last-of-type {
@@ -204,4 +207,22 @@ section {
     text-decoration: none;
     color: rgb(11, 11, 36);
     font-weight: 1000;
+}
+#showBigScreen{
+    display: none;
+}
+@media screen and (min-width:550px){
+    body{
+        background: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #showBigScreen{
+        display: block;
+    }
+    .contentWrapper{
+        display: none;
+    }
 }
