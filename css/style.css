@@ -164,6 +164,7 @@ section {
     padding-bottom: 20px;
     background:rgba(71, 156, 199, 0.2);
     margin-bottom:5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.19);
 }
 
 .rowContent2:last-of-type {
@@ -272,10 +273,20 @@ section {
   .modal-body {padding: 5px 16px;
     
 }
-.modal-body p {
+.modal-body h3 {
     color: black;
+    font-weight: 200;
 }
-  
+  .modalDetail{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+  }
+  .modalDetail h5 {
+      font-weight: 300;
+      color: rgb(88, 86, 86);
+  }
 
   
   /* Modal Content */
@@ -297,6 +308,21 @@ section {
     from {top: 0px; opacity: 0}
     to {top: 200px; opacity: 1}
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
