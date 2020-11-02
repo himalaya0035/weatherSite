@@ -1,4 +1,4 @@
-// $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=New Jersey&appid=c197256603d2483beeac8ea186d08c5e',function(data){
+// $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=New Jersey&appid=YourApiKey',function(data){
 //   console.log(data)
 // })
 
@@ -19,7 +19,7 @@ function getLatLon(position) {
   lat = position.coords.latitude;
   lon = position.coords.longitude;
   // console.log(lat,lon)
-  $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=' + lat  + '&lon=' + lon + '&units=metric&appid=c197256603d2483beeac8ea186d08c5e', function (data) {
+  $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=' + lat  + '&lon=' + lon + '&units=metric&appid=yourapikey', function (data) {
     console.log(data);
     temperature.innerHTML = Math.floor(data.main.temp) + `<sup
     style="font-size: 25px; position: absolute; top:11px;">&degC</sup>`;
@@ -27,7 +27,7 @@ function getLatLon(position) {
     feelsLike.innerHTML = 'Feels like ' + Math.floor(data.main.feels_like) + '\xB0';
     weatherIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + '@2x.png';
     weatherText.innerHTML = data.weather[0].main;
-    // $.getJSON('https://api.openweathermap.org/data/2.5/onecall?lat='+ lat  + '&lon=' + lon + '&units=metric&appid=c197256603d2483beeac8ea186d08c5e', function (secondDataSet) {
+    // $.getJSON('https://api.openweathermap.org/data/2.5/onecall?lat='+ lat  + '&lon=' + lon + '&units=metric&appid=yourapikey', function (secondDataSet) {
     //   console.log(secondDataSet);
     // });
    });
