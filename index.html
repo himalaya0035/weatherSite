@@ -14,7 +14,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
 </head>
-
+<script>
+    var labelForGraph = [];
+</script>
 <body>
     
     <div class="contentWrapper">
@@ -33,14 +35,13 @@
 
         <div class="main_section">
             <div class="weather">
-                <h5>Bareilly, Asia-Kolkata</h5>
-                <h1 id="temperature" style="position: relative;">31<sup
-                        style="font-size: 25px; position: absolute; top:11px;">&degC</sup></h1>
-                <h5>Feels Like 29&deg;</h5>
+                <h5 id="placeName">Bareilly, Asia-Kolkata</h5>
+                <h1 id="temperature" style="position: relative;">31</h1>
+                <h5 id="feelsLike">Feels Like 29&deg;</h5>
             </div>
             <div class="weatherIcon">
-                <img src="http://openweathermap.org/img/wn/10n@2x.png" alt="" width="95">
-                <h5 style="text-align: center;">Clear</h5>
+                <img id="iconWeather" src="http://openweathermap.org/img/wn/10n@2x.png" alt="" width="95">
+                <h5 id="weatherText" style="text-align: center;">Clear</h5>
             </div>
         </div>
         <div class="emptySection">
@@ -127,7 +128,7 @@
                 7-day Forecast
             </div>
             <div class="rowContainer">
-                <div class="rowContent2 myBtn">
+                <div class="rowContent2 myBtn" id="1">
                     <div class="dayAndMonth">
                         <h5>Sat, 24 Oct</h5>
                         <h6>Clear Sky</h6>
@@ -140,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2 myBtn">
+                <div class="rowContent2 myBtn" id="2">
                     <div class="dayAndMonth">
                         <h5>Sun, 25 Oct</h5>
                         <h6>Rain</h6>
@@ -153,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2 myBtn">
+                <div class="rowContent2 myBtn" id="3">
                     <div class="dayAndMonth">
                         <h5>Mon, 26 Oct</h5>
                         <h6>Thunderstorm</h6>
@@ -166,7 +167,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2 myBtn">
+                <div class="rowContent2 myBtn" id="4">
                     <div class="dayAndMonth">
                         <h5>Tue, 27 Oct</h5>
                         <h6>Mist</h6>
@@ -179,7 +180,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2 myBtn">
+                <div class="rowContent2 myBtn" id="5">
                     <div class="dayAndMonth">
                         <h5>Wed, 28 Oct</h5>
                         <h6>Clear Sky</h6>
@@ -192,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2 myBtn">
+                <div class="rowContent2 myBtn" id="6">
                     <div class="dayAndMonth">
                         <h5>Thu, 29 Oct</h5>
                         <h6>Clouds</h6>
@@ -205,7 +206,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rowContent2 myBtn">
+                <div class="rowContent2 myBtn" id="7">
                     <div class="dayAndMonth">
                         <h5>Fri, 30 Oct</h5>
                         <h6>Clouds</h6>
@@ -232,12 +233,11 @@
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <span class="close">&times;</span>
+      <span class="close">&times;</span> 
       <h2>Details</h2>
     </div>
-    <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
+    <div class="modal-body" style="color: black;">
+     
     </div>
  
   </div>
@@ -250,9 +250,8 @@
     <div id="showBigScreen">
         <h2 class="text-align:center">This site is available only for mobile user. We sincerely apologize for the inconveniance caused.</h2>
     </div>
-    <script src="js/secondary.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chart.js"></script>
+    <script src="js/secondary.js"></script>
 </body>
-
 </html>
