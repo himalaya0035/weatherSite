@@ -9,7 +9,16 @@
     font-family: 'Montserrat';
     color: white;
 }
-
+#loader{
+    visibility: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+.contentWrapper {
+    visibility: 1;
+    opacity: 1;
+    transition: 0.5s;
+}
 html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -214,17 +223,6 @@ section {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -308,23 +306,6 @@ section {
     from {top: 0px; opacity: 0}
     to {top: 200px; opacity: 1}
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media screen and (min-width:550px){
