@@ -126,6 +126,10 @@ function fillFirstRow(data, callback) {
     }
 }
 function fillChart(data, callback) {
+    if (Window.myLineChart != undefined){
+      Window.myLineChart.destroy();
+      console.log("chart instance destroyed")
+    }
     let labelForGraph = [];
     let dataForGraph = [];
     console.log(data);
@@ -137,7 +141,7 @@ function fillChart(data, callback) {
     }
     // chart.js code starts here 
     var ctx = document.getElementById("myAreaChart");
-    var myLineChart = new Chart(ctx, {
+    Window.myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
           labels: labelForGraph,
