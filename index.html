@@ -26,13 +26,13 @@
     <div class="contentWrapper">
         <section class="content">
             <div class="top_bar">
-                <a id="favourites" href="#"><i class="fa fa-heart-o"
+                <a id="favourites" href="#" onclick="storeCity()"><i class="fa fa-heart-o" id="favIcon"
                         style="font-size: 18px; font-weight: 100;"></i></a>
                 <div class="searchBar" action="">
                     <input spellcheck="false" type="text" id="searchBox" placeholder="Search City...">
                     <a href="#" onclick="searchCity()" id="searchIcon"><img src="images/search.svg" alt="" width="18"></a>
                 </div>
-                <a id="currentLocation" href="" onclick="getLocation()" title="My location"><i class="fa fa-map-marker"
+                <a id="currentLocation" href="#" onclick="getLocation()" title="My location"><i class="fa fa-map-marker"
                         style="font-size: 18px;"></i></a>
             </div>
             <!-- <div class="searchResult" style="z-index: 10; background:white; margin-top: 10px; height:auto;  border-radius: 10px;;">
@@ -169,6 +169,7 @@
             inconveniance caused.</h2>
     </div>
     <script src="js/main2.js"></script>
+    <script src="js/favourites.js"></script>
 </body>
 
 </html>
