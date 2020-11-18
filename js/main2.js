@@ -67,7 +67,7 @@ function showError(error) {
             break;
     }
         getApiData(undefined,undefined,'New Delhi')
-        .then((returnedPromise) => console.log("promise resolved"))
+        .then(() => console.log("promise resolved"))
         .catch(err => console.log(err.message))
 }
 
@@ -118,6 +118,7 @@ function fillFirstRow(data, callback) {
     temperature.innerHTML = Math.floor(data.main.temp) + `<sup
       style="font-size: 25px; position: absolute; top:11px;">&degC</sup>`;
     place.innerHTML = data.name + ", " + data.sys.country;
+    toggleIcon(place.innerHTML)
     feelsLike.innerHTML = 'Feels like ' + Math.floor(data.main.feels_like) + '\xB0';
     weatherIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + '@2x.png';
     weatherText.innerHTML = data.weather[0].main;
@@ -132,7 +133,7 @@ function fillChart(data, callback) {
     }
     let labelForGraph = [];
     let dataForGraph = [];
-    console.log(data);
+    // console.log(data);
     for (var i =0; i<24; i++){
         hour = extractTime(data.hourly[i].dt)
         hourlyTemp = Math.ceil(data.hourly[i].temp);
@@ -270,7 +271,7 @@ function fillForecastData(data) {
           modal.style.display = "block";
         })
       }
-    document.getElementById('pop').innerHTML = data.daily[0].pop + '%';
+    document.getElementById('pop').innerHTML = data.daily[0].pop*100 + '%';
     document.getElementById('uv').innerHTML = data.current.uvi;
     // extractDayAndMonth(data.current.dt)
 }
@@ -331,7 +332,7 @@ span.onclick = function () {
     }
   }
   function setModalElement(id, data){
-  console.log(id)
+  // console.log(id)
   modalBody.innerHTML = `
   <div class="modalDetail">
   <h5>Sunrise</h5>
@@ -347,7 +348,7 @@ span.onclick = function () {
 </div>
 <div class="modalDetail">
 <h5>Precipitation</h5>
-<h5>${data.daily[id].pop}%</h5>
+<h5>${data.daily[id].pop * 100}%</h5>
 </div>
 <div class="modalDetail">
 <h5>Humidity</h5>
