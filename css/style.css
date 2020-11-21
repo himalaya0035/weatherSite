@@ -154,7 +154,7 @@ section {
 
 .searchResults{
     position: absolute;
-    top: 10%;
+    margin-top:10%;
     left: 15%;
     right: 15%;
     background: white;
@@ -175,6 +175,7 @@ section {
 .favCityListItem:last-child{
     border-bottom: none;
     padding-bottom: 0px;
+    font-size: 3.6vw;
 }
 .favCityListItem h1{
     color: black;
