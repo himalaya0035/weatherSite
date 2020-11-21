@@ -91,11 +91,6 @@ section {
 }
 
 /* top section ends here */
-.lastUpdated {
-    display: flex;
-    padding-left: 20px;
-    margin-top: 20px;
-}
 
 /* main section starts here */
 .main_section {
@@ -157,6 +152,38 @@ section {
     justify-content: center;
 }
 
+.searchResults{
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    right: 15%;
+    background: white;
+    width: 69%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+    display: none;
+}
+.favCityListItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #454eae;
+}
+.favCityListItem:last-child{
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+.favCityListItem h1{
+    color: black;
+    font-weight: 100;
+}
+.favCityListItem i{
+    color:#454eae;
+    font-size: 25px;
+}
 .rowContent,
 .rowContent2 {
     width: 200px;
