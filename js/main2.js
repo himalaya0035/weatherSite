@@ -29,16 +29,16 @@ async function getApiData(lati, long,placeName) {
         loader.style.opacity = 1;
         var currentResponse;
         if (placeName == undefined){
-            currentResponse = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lati + '&lon=' + long + '&units=metric&appid=YOUR_API_KEY');
+            currentResponse = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lati + '&lon=' + long + '&units=metric&appid=c197256603d2483beeac8ea186d08c5e');
         }
         else {
-            currentResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${placeName}&units=metric&appid=YOUR_API_KEY`);
+            currentResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${placeName}&units=metric&appid=c197256603d2483beeac8ea186d08c5e`);
         }
         const currentData = await currentResponse.json();
         fillFirstRow(currentData, fillCurrentDetails);
         let latitude = currentData.coord.lat;
         let longitude = currentData.coord.lon;
-        const forecastResponse = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=metric&exclude=minutely&appid=YOUR_API_KEY');
+        const forecastResponse = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=metric&exclude=minutely&appid=c197256603d2483beeac8ea186d08c5e');
         const forecastData = await forecastResponse.json();
         fillChart(forecastData, fillForecastData);
         wrapper.style.visibility = 1;
@@ -84,17 +84,18 @@ var weatherText = document.getElementById("weatherText");
 var rowContentArray = document.getElementsByClassName("rowContent");
 var rowContainer = document.getElementsByClassName("rowContainer")[0];
 var input = document.getElementById("searchBox");
+var searchResult = document.getElementsByClassName("searchResults")[0];
 // variable declaration ends
 
 // the only statements outside of functions apart from declaration
 input.addEventListener("keyup", function (event) {
     if ("Enter" === event.key) { // new way of doing this
       event.preventDefault();
-      searchCity(); // well done himalaya
+      searchCity(input.value); // well done himalaya
     }
 });
-function searchCity(){
-    searchedValue = input.value;
+function searchCity(value){
+    searchedValue = value;
     input.value = '';
       if (searchedValue == ''){
          alert('Please enter a valid Keyword!!');
@@ -104,8 +105,37 @@ function searchCity(){
         .then(() => console.log("promise resolved"))
         .catch(err => console.log(err.message))
       }
-    
+    searchResult.innerHTML = '';
+    searchResult.style.display = 'none';
 }
+function showFavCity(cities,searchText){
+  var matches = cities.filter((favCity) => {
+    const regex = new RegExp(`^${searchText}`,'gi');
+    return favCity.match(regex)
+  })
+  if(searchText.length === 0){
+    matches = [];
+    searchResult.innerHTML = '';
+  }
+  outputHtml(matches);
+}
+function outputHtml(matches){
+  if (matches.length > 0){
+    searchResult.style.display = 'block'
+     html = matches.map(match => `  <div class="favCityListItem" onclick="searchCity('${match}')">
+    <h1>${match}</h1>
+    <i class="fa fa-star"></i>
+</div>`).join('');
+searchResult.innerHTML = html;
+  }
+  else{
+    searchResult.style.display = 'none';
+  }
+}
+input.addEventListener('input', function(){
+  showFavCity(favouriteCity,input.value)
+})
+
 function fillFirstRow(data, callback) {
     if (data.cod != 200){
         alert("Result Not Found, try searching a different City \n or search like (placeName, district, state) ");
@@ -129,7 +159,7 @@ function fillFirstRow(data, callback) {
 function fillChart(data, callback) {
     if (Window.myLineChart != undefined){
       Window.myLineChart.destroy();
-      console.log("chart instance destroyed")
+      // console.log("chart instance destroyed")
     }
     let labelForGraph = [];
     let dataForGraph = [];
