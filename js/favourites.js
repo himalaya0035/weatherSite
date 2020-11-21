@@ -21,26 +21,26 @@ function isFavCity(cityName) {
 
 function addtoLocalStorage(cityName) {
     favouriteCity.push(cityName);
-    console.log(favouriteCity);
+    // console.log(favouriteCity);
     localStorage.setItem("FavCityList", JSON.stringify(favouriteCity));
 }
 
 function removeFromLocalStorage(cityName) {
     let index = favouriteCity.indexOf(cityName);
     favouriteCity.splice(index, 1);
-    console.log(favouriteCity)
+    // console.log(favouriteCity)
     localStorage.setItem("FavCityList", JSON.stringify(favouriteCity));
 }
 
 function toggleIcon(cityName) {
-    console.log(cityName)
-    console.log(favouriteCity)
+    // console.log(cityName)
+    // console.log(favouriteCity)
     if (favouriteCity.indexOf(cityName) == -1) {
-        console.log("if statements works")
+        // console.log("if statements works")
         favIcon.classList.add('fa-heart-o');
         favIcon.classList.remove('fa-heart');
     } else {
-        console.log("else statements works")
+        // console.log("else statements works")
         favIcon.classList.add('fa-heart');
         favIcon.classList.remove('fa-heart-o');
     }
