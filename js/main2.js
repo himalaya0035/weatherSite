@@ -95,7 +95,7 @@ input.addEventListener("keyup", function (event) {
     }
 });
 function searchCity(value){
-    searchedValue = value;
+    searchedValue = value || input.value;
     input.value = '';
       if (searchedValue == ''){
          alert('Please enter a valid Keyword!!');
