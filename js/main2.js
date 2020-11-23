@@ -29,16 +29,16 @@ async function getApiData(lati, long,placeName) {
         loader.style.opacity = 1;
         var currentResponse;
         if (placeName == undefined){
-            currentResponse = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lati + '&lon=' + long + '&units=metric&appid=one + two');
+            currentResponse = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lati + '&lon=' + long + '&units=metric&appid=c197256603d2483beeac8ea186d08c5e');
         }
         else {
-            currentResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${placeName}&units=metric&appid=one + two`);
+            currentResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${placeName}&units=metric&appid=c197256603d2483beeac8ea186d08c5e`);
         }
         const currentData = await currentResponse.json();
         fillFirstRow(currentData, fillCurrentDetails);
         let latitude = currentData.coord.lat;
         let longitude = currentData.coord.lon;
-        const forecastResponse = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=metric&exclude=minutely&appid=one + two');
+        const forecastResponse = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=metric&exclude=minutely&appid=c197256603d2483beeac8ea186d08c5e');
         const forecastData = await forecastResponse.json();
         fillChart(forecastData, fillForecastData);
         wrapper.style.visibility = 1;
@@ -119,8 +119,6 @@ function showFavCity(cities,searchText){
   }
   outputHtml(matches);
 }
-var one = 'c197256603d2483';
-var two = 'beeac8ea186d08c5e';
 function outputHtml(matches){
   if (matches.length > 0){
     searchResult.style.display = 'block'
