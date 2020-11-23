@@ -11,7 +11,8 @@ function getLocation() {
         // will include a function here which will show the weather for New Delhi (default value)
     }
 }
-console.log(process.env.YOUR_API_KEY);
+var key = {process.env.YOUR_API_KEY};
+console.log(key);
 function getLatLon(position) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
