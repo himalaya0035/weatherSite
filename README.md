@@ -1,3 +1,3 @@
- ![SunnyIcon](https://openweathermap.org/img/wn/01d@2x.png)  ![SunnyIcon](https://openweathermap.org/img/wn/01d@2x.png)  ![SunnyIcon](https://openweathermap.org/img/wn/01d@2x.png)
+ ![](https://developer.accuweather.com/sites/default/files/01-s.png) ![](https://developer.accuweather.com/sites/default/files/01-s.png)
  # Weather-Site
 
