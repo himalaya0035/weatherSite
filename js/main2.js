@@ -29,7 +29,6 @@ async function getApiData(lati, long,placeName) {
         loader.style.opacity = 1;
         var currentResponse;
         var apiKey = await (await fetch("/.netlify/functions/getApiKey")).json();
-        console.log(apiKey);
         if (placeName == undefined){
             currentResponse = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lati + '&lon=' + long + '&units=metric&appid=' + apiKey);
         }
