@@ -28,17 +28,19 @@ async function getApiData(lati, long,placeName) {
         loader.style.visibility = 1;
         loader.style.opacity = 1;
         var currentResponse;
+        var apiKey = await (await fetch("/.netlify/functions/getApiKey")).json();
+        console.log(apiKey);
         if (placeName == undefined){
-            currentResponse = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lati + '&lon=' + long + '&units=metric&appid={API_KEY}');
+            currentResponse = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lati + '&lon=' + long + '&units=metric&appid=' + apiKey);
         }
         else {
-            currentResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${placeName}&units=metric&appid={API_KEY}`);
+            currentResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${placeName}&units=metric&appid=` + apiKey);
         }
         const currentData = await currentResponse.json();
         fillFirstRow(currentData, fillCurrentDetails);
         let latitude = currentData.coord.lat;
         let longitude = currentData.coord.lon;
-        const forecastResponse = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=metric&exclude=minutely&appid={YOUR_API_KEY}');
+        const forecastResponse = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&units=metric&exclude=minutely&appid=' + apiKey);
         const forecastData = await forecastResponse.json();
         fillChart(forecastData, fillForecastData);
         wrapper.style.visibility = 1;
