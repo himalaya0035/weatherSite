@@ -1,3 +1,5 @@
+let count = 0;
+var apiKey;
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(getLatLon, showError, {
@@ -28,7 +30,14 @@ async function getApiData(lati, long,placeName) {
         loader.style.visibility = 1;
         loader.style.opacity = 1;
         var currentResponse;
-        var apiKey = await (await fetch("/.netlify/functions/getApiKey")).json();
+         if (count == 0){
+        var apiKey2 = await (await fetch("/.netlify/functions/getApiKey")).json();
+          count = count + 1;
+          apiKey = apiKey2;
+        }
+        else{
+          
+        }
         if (placeName == undefined){
             currentResponse = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lati + '&lon=' + long + '&units=metric&appid=' + apiKey);
         }
