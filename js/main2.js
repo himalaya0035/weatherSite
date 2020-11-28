@@ -63,7 +63,7 @@ async function getApiData(lati, long,placeName) {
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            alert("User denied the request for Geolocation.");
+            alert("Geolaction Request Denied, To turn it on, allow location in site settings.");
             // will include a function here which will show the weather for New Delhi
             break;
         case error.POSITION_UNAVAILABLE:
